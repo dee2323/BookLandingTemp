@@ -1,0 +1,559 @@
+/* general setting */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+.container {
+    padding: 2rem 7rem;
+    max-width: 1440px;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 2rem;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+/* navbar section */
+.container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: hsl(229, 31%, 21%);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.container nav ul li a:hover,
+.container nav ul li a:focus {
+    color: hsl(0, 94%, 66%);
+}
+
+.container #listItem {
+    border: 2px solid hsl(0, 94%, 66%);
+    padding: 0.55rem 1.5rem;
+    background: hsl(0, 94%, 66%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    box-shadow: 0 4px 0.3rem 0 rgba(0, 0, 0, 0.247);
+}
+
+.container #listItem:hover,
+.container #listItem:focus {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 94%, 66%);
+}
+
+/* row section */
+.container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.container .row .secound-col {
+    margin-left: 6rem;
+}
+
+.container .row .first-col,
+.container .row .secound-col {
+    flex-basis: 50%;
+    margin-bottom: 1rem;
+}
+
+.container .row .first-col h1 {
+    font-size: 2.5rem;
+    color: hsl(229, 31%, 21%);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.container .row .first-col p {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: hsl(229, 8%, 60%);
+    line-height: 1.5;
+}
+
+.container .row .first-col .links {
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+}
+
+.container .row .first-col .links a {
+    text-decoration: none;
+    color: hsl(229, 31%, 21%);
+    border-radius: 0.3rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.container .row .first-col .links #link1 {
+    margin-right: 1rem;
+    padding: 0.7rem 1rem;
+    color: hsl(0, 0%, 100%);
+    background: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+}
+
+.container .row .first-col .links #link2 {
+    background: hsla(165, 17%, 95%, 0.664);
+    border: 2px solid hsla(165, 17%, 95%, 0.664);
+    color: hsl(229, 31%, 21%);
+    box-shadow: 0 0 0.5rem rgba(87, 71, 71, 0.247);
+    padding: 0.7rem 1rem;
+}
+
+.container .row .first-col .links #link1:focus,
+.container .row .first-col .links #link1:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(231, 69%, 60%);
+}
+
+.container .row .first-col .links #link2:focus,
+.row .first-col .links #link2:hover {
+    border: 2px solid hsl(229, 31%, 21%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.container .row .secound-col::after {
+    content: "";
+    position: absolute;
+    right: 0rem;
+    bottom: 2rem;
+    width: 38rem;
+    height: 20rem;
+    background: hsl(231, 69%, 60%);
+    z-index: -1;
+    border-top-left-radius: 30% 50%;
+    border-bottom-left-radius: 30% 50%;
+}
+
+.container .row .secound-col {
+    background-image: url("images/illustration-hero.svg");
+}
+
+/* feature section */
+.container .feature h2,
+.container .download-section h2,
+.container .qustion h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.container .feature p,
+.container .download-section p,
+.container .qustion p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: hsl(229, 8%, 60%);
+    line-height: 1.5;
+    /* width: 29rem; */
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.container .feature .feature-sellector .control {
+    width: 29rem;
+    padding-bottom: 2.5rem
+}
+
+.container .feature .feature-sellector {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40rem;
+    margin: auto;
+    position: relative;
+    color: hsl(229, 31%, 21%);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+
+.container .feature .feature-sellector::after {
+    content: "";
+    width: 39rem;
+    border-bottom: 0.1rem hsl(229, 8%, 60%) solid;
+    position: absolute;
+}
+
+.container .feature .feature-sellector .control:focus,
+.container .feature .feature-sellector .control:hover {
+    color: hsl(0, 94%, 66%);
+    border-bottom: 3px hsl(0, 94%, 66%) solid;
+
+}
+
+.container .feature .row2 {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+    margin-top: -1rem;
+}
+
+.container .feature .row2 .secound-col2 img {
+    margin-right: 10rem;
+}
+
+.container .feature .row2 .secound-col2 {
+    position: relative;
+    margin-right: 5rem;
+}
+
+.container .feature .row2 .first-col2 {
+    margin-left: -5rem;
+}
+
+.container .feature .row2 .secound-col2::after {
+    content: "";
+    position: absolute;
+    left: -40rem;
+    bottom: -7rem;
+    width: 68rem;
+    height: 24rem;
+    background: hsl(231, 69%, 60%);
+    z-index: -1;
+    border-top-right-radius: 30% 50%;
+    border-bottom-right-radius: 30% 50%;
+}
+
+.container .feature .row2 .first-col2 .linkin #info,
+.container .download-section .row .col1 a,
+.container .qustion a {
+    margin-right: 1rem;
+    padding: 0.7rem 1rem;
+    color: hsl(0, 0%, 100%);
+    background: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+}
+
+.container .download-section .row .col1 a:hover,
+.container .download-section .row .col1 a:focus,
+.container .feature .row2 .first-col2 .linkin #info:focus,
+.container .feature .row2 .first-col2 .linkin #info:hover,
+.container .qustion a:hover {
+    color: hsl(231, 69%, 60%);
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.container .feature .row2 .first-col2 a,
+.container .download-section .row .col1 a,
+.container .qustion a {
+    text-decoration: none;
+    color: hsl(229, 31%, 21%);
+    border-radius: 0.3rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.container .feature .row2 .first-col2 h3 {
+    font-size: 1.5rem;
+    color: hsl(229, 31%, 21%);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.container .feature .row2 .first-col2 p {
+    text-align: start;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: hsl(229, 8%, 60%);
+    line-height: 1.5;
+    width: 24rem;
+}
+
+.container .feature .row2 .secound-col2 {
+    background-image: none;
+}
+
+/* download section  */
+.container .download-section h2 {
+    margin-top: 13rem;
+}
+
+.container .download-section .row {
+    justify-content: center;
+    align-items: center;
+    margin-top: -4.7rem;
+}
+
+.container .download-section .row .col1 {
+    width: 18rem;
+    height: 23rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    border: 0.3rem hsl(0, 0%, 100%) solid;
+    box-shadow: 0 0 0.5rem rgba(87, 71, 71, 0.247);
+    margin-left: 2rem;
+    margin-top: -4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 1.2rem;
+}
+
+.container .download-section .row .col1 img {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.container .download-section .row .col1 a {
+    margin-bottom: -1rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+.container .download-section .row .col1 h3 {
+    margin-bottom: 0.6rem;
+}
+
+.container .download-section .row .col1 p::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: dotted hsla(165, 17%, 95%, 0.669) 0.4rem;
+    bottom: 5rem;
+    left: 0;
+}
+
+.container .download-section .row .col1 {
+    margin-top: 1rem;
+}
+
+.container .download-section .row .col2 {
+    margin-top: 4rem;
+}
+
+.container .download-section .row .col3 {
+    margin-top: 8rem;
+}
+
+/* qustion section  */
+.container .qustion .banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 31rem;
+    margin: auto;
+    position: relative;
+}
+
+.container .qustion .banner li {
+    display: block;
+    width: 100%;
+    /* padding-bottom: 1rem; */
+    margin-top: 1rem;
+}
+
+.container .qustion .banner .firstItem::before {
+    content: "";
+    width: 31rem;
+    border-bottom: 0.1rem hsl(229, 8%, 60%) solid;
+    position: absolute;
+    top: -1.4rem;
+}
+
+
+.container .qustion .btn {
+    display: block;
+    width: 7rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 8.5rem;
+}
+
+.container .banner details {
+    display: block;
+    position: relative;
+}
+
+.container .banner details::after {
+    content: "";
+    width: 31rem;
+    border-bottom: 0.1rem hsl(229, 8%, 60%) solid;
+    position: absolute;
+    bottom: -0.2rem;
+}
+
+.container .banner details summary {
+    cursor: pointer;
+    background-image: url("images/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-bottom: 1.7rem;
+
+}
+
+.container .banner details p {
+    color: hsl(229, 8%, 60%);
+    text-align: start;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+
+    margin-bottom: -.004rem;
+
+}
+
+.container .banner li :hover,
+.container .banner li :focus {
+    color: hsl(0, 94%, 66%);
+}
+
+.container .banner details summary img {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+summary::marker {
+    content: "";
+}
+
+/* contact section */
+.contact {
+    background-color: hsl(231, 69%, 60%);
+    height: 20rem;
+    width: 100%;
+}
+
+.contact h3 {
+    text-align: center;
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    padding-top: 3rem;
+    font-weight: 400;
+    margin-bottom: 2.7rem;
+}
+
+.contact h4 {
+    text-align: center;
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 2.4rem;
+}
+
+.contact .formb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .formb input {
+    padding: 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    border: transparent;
+    display: inline-block;
+    width: 17rem;
+    height: 2.7rem;
+}
+
+.contact .formb button {
+    margin-left: .8rem;
+    height: .7rem;
+    padding: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border: hsl(0, 94%, 66%) 2px solid;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 94%, 66%);
+
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.contact .formb button:hover,
+.contact .formb button:focus {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 94%, 66%);
+    cursor: pointer;
+}
+
+/* footer section  */
+footer {
+    height: 4.8rem;
+    background-color: hsl(229, 31%, 21%);
+    color: hsl(0, 0%, 100%);
+    padding-left: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+
+}
+
+footer nav ul li a {
+    color: hsl(0, 0%, 100%);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+footer nav .footer-links {
+    display: block;
+    margin-right: 35rem;
+    margin-left: 2rem;
+}
+
+footer nav ul li a:hover,
+footer nav ul li a:focus {
+    color: hsl(0, 94%, 66%);
+}
+
+footer nav a img {
+    filter: invert(1) brightness(100%) hue-rotate(180deg);
+    -webkit-filter: invert(1) brightness(100%) hue-rotate(180deg);
+}
+
+footer nav .social-links li a img {
+    filter: invert(0);
+}
+
+footer nav .social-links li a img:hover,
+footer nav .social-links li a img:focus {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    -webkit-filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
